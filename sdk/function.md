@@ -101,4 +101,4 @@
 - OnBroadcastMessage
     > 终端收到广播事件，sdk直接将事件回调给上层app
     >
-    > 回调参数：SDK上下文对象、[MeetingServer](../meeting-server/meeting-server-api.md)的`broadcast`事件携带的`payload`字符串内容
+    > 回调参数：SDK上下文对象、[MeetingServer](../meeting-server/meeting-server-api.md)的`broadcast`事件携带的`source_endpoint`和`payload`字符串内容
