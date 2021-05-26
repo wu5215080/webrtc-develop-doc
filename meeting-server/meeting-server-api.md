@@ -280,7 +280,7 @@ broadcast | 广播事件（`直接将错误事件回调给SDK调用者，SDK内�
 {
     "version": 0,
     "cseq": 0,
-    "event": "stream",
+    "event": "stream_stat",
     "session": "xxx",
     "data": {
         "device": "xxx",
@@ -301,7 +301,7 @@ broadcast | 广播事件（`直接将错误事件回调给SDK调用者，SDK内�
 {
     "version": 0,
     "cseq": 0,
-    "event": "endpoint",
+    "event": "endpoint_stat",
     "session": "xxx",
     "data": {
         "device": "xxx",
@@ -326,7 +326,8 @@ broadcast | 广播事件（`直接将错误事件回调给SDK调用者，SDK内�
     "event": "error",
     "session": "xxx",
     "data": {
-        "type": "xxx"
+        "err": xxx,
+        "err_msg": "xxx"
     }
 }
 ```

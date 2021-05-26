@@ -83,15 +83,22 @@
 
 ## 事件回调接口
 
-- 流状态变化通知（stream_stat)
+- 流状态变化通知（OnStreamStatChange)
     > 频道内有客户端推流成功时或者推流结束，sdk直接将事件回调给上层app
-    > 携带参数：
+    >
+    > 回调参数：SDK上下文对象、[MeetingServer](../meeting-server/meeting-server-api.md)的`stream_stat`事件携带的参数（device、endpoint、stream、stat）
 
-- 会议频道内有终端上下线通知（endpoint_stat）
+- 会议频道内有终端上下线通知（OnEndpointStatChange）
     > 频道内有终端上下线，sdk直接将事件回调给上层app
+    >
+    > 回调参数：SDK上下文对象、[MeetingServer](../meeting-server/meeting-server-api.md)的`endpoint_stat`事件携带的参数(device、endpoint、stat)
 
-- 终端接收到错误通知（error）
+- 终端接收到错误通知（OnError）
     > 有针对性终端的错误信息产生，sdk直接将事件回调给上层app
+    >
+    > 回调参数：SDK上下文对象、[MeetingServer](../meeting-server/meeting-server-api.md)的`error`事件携带的参数（err、err_msg）
 
-- broadcast
+- OnBroadcastMessage
     > 终端收到广播事件，sdk直接将事件回调给上层app
+    >
+    > 回调参数：SDK上下文对象、[MeetingServer](../meeting-server/meeting-server-api.md)的`broadcast`事件携带的`payload`字符串内容
